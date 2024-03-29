@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>Visualsearch | Home</title>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/swiper.css" />
+  </head>
+  <body>
+    <!-- Navbar Section Start -->
+    <nav x-data="{ isOpen: false }" class="relative bg-white">
+      <div class="max-w-[1440px] py-5 md:py-9 px-5 md:px-0 mx-auto md:flex">
+        <div class="flex items-center justify-between">
+          <a href="#">
+            <img
+              class="h-12 md:md-full"
+              src="./assets/images/logo.png"
+              alt=""
+            />
+          </a>
+
+          <!-- Mobile menu button -->
+          <div class="flex lg:hidden">
+            <button
+              x-cloak
+              @click="isOpen = !isOpen"
+              type="button"
+              class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
+              aria-label="toggle menu"
+            >
+              <svg
+                x-show="!isOpen"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 text-black -scale-x-100"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+              >
+                <path d="M16 18V20H5V18H16ZM21 11V13H3V11H21ZM19 4V6H8V4H19Z" />
+              </svg>
+
+              <svg
+                x-show="isOpen"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 text-black"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+        <div
+          x-cloak
+          :class="[isOpen ? 'translate-y-0 opacity-100 ' : 'opacity-0 translate-y-full']"
+          class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white md:mt-0 md:p-0 md:top-0 md:relative md:opacity-100 md:translate-y-0 md:flex md:items-center md:justify-between"
+        >
+          <div
+            class="flex flex-col px-2 -mx-4 md:flex-row md:ms-[40px] xl:mx-[160px] md:py-0"
+          >
+            <a
+              href="#"
+              class="px-2.5 py-2 rubik-400 text-lg text-blue-400 underline transition-colors duration-300 transform rounded-lg hover:text-blue-400 md:mx-2"
+              >Home</a
+            >
+            <a
+              href="./products.html"
+              class="px-2.5 py-2 rubik-400 text-lg text-gray-700 transition-colors duration-300 transform rounded-lg hover:text-blue-400 md:mx-2"
+              >Produkte</a
+            >
+            <a
+              href="#"
+              class="px-2.5 py-2 rubik-400 text-lg text-gray-700 transition-colors duration-300 transform rounded-lg hover:text-blue-400 md:mx-2"
+              >Verfahren</a
+            >
+            <a
+              href="#"
+              class="px-2.5 py-2 rubik-400 text-lg text-gray-700 transition-colors duration-300 transform rounded-lg hover:text-blue-400 md:mx-2"
+              >Über uns</a
+            >
+            <a
+              href="#"
+              class="px-2.5 py-2 rubik-400 text-lg text-gray-700 transition-colors duration-300 transform rounded-lg hover:text-blue-400 md:mx-2"
+              >Preise</a
+            >
+            <a
+              href="#"
+              class="px-2.5 py-2 rubik-400 text-lg text-gray-700 transition-colors duration-300 transform rounded-lg hover:text-blue-400 md:mx-2"
+              >Kontakt</a
+            >
+          </div>
+
+          <div class="flex gap-6 items-center">
+            <div class="flex gap-1.5 items-center">
+              <img src="./assets/icons/globe.png" alt="" />
+              <p>DE</p>
+            </div>
+            <button
+              class="rubik-600 bg-[#F7A308] px-4 xl:px-8 py-3 xl:py-6 rounded-lg"
+            >
+              Eine Demo anfordern
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar Section End -->
+
+    <!-- Banner Section Start -->
+    <section
+      class="bg-[#001633] xl:rounded-tr-[400px] px-5 md:px-0 pt-5 md:pt-0"
+    >
+      <div
+        class="flex flex-col-reverse gap-10 mt-4 md:flex md:flex-row md:gap-0 justify-between items-center lg:mr-24 lg:ms-32 2xl:ms-60"
+      >
+        <div class="max-w-[640px] lg:my-20 2xl:my-0">
+          <h1
+            class="rubik-600 text-white text-center lg:text-left font-semibold text-4xl md:text-5xl xl:text-6xl leading-14"
+          >
+            Helfen Sie Kunden <br />
+            leichter zu finden <br />
+            wonach sie suchen
+          </h1>
+          <p
+            class="rubik-400 text-white text-center lg:text-left text-sm lg:text-lg font-normal leading-7 pt-[18px]"
+          >
+            Verbessern Sie die Shopping Experience Ihrer Kunden mit unserem
+            visuellen AI-Suchtool. Die automatisierte Produktempfehlung und
+            visuelle Suche von VisualSearch lassen sich so schnell
+            implementieren wie nie zuvor.
+          </p>
+          <div class="mt-9 md:mt-[60px]">
+            <button
+              class="bg-[#F7A308] rubik-600 w-full md:max-w-[360px] h-12 md:h-[60px] font-bold rounded-lg"
+            >
+              Kostenlose Testversion starten
+            </button>
+            <p
+              class="pt-[12px] text-xs text-white text-center lg:text-left md:text-[14px]"
+            >
+              30 Tage kostenlos testen + in 30 Minuten einsatzbereit
+            </p>
+          </div>
+          <div class="swiper bnrSwiper lg:px-8 my-12 max-w-[80vw]">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/images/bnrslider1.png" alt="" srcset="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/bnrslider2.png" alt="" srcset="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/bnrslider3.png" alt="" srcset="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/bnrslider4.png" alt="" srcset="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/bnrslider1.png" alt="" srcset="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/bnrslider2.png" alt="" srcset="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/bnrslider3.png" alt="" srcset="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/bnrslider4.png" alt="" srcset="" />
+              </div>
+            </div>
+            <div class="swiper-button-next next-btn-banner"></div>
+            <div class="swiper-button-prev prev-btn-banner"></div>
+          </div>
+        </div>
+        <div>
+          <img
+            class="md:h-full"
+            src="/assets/images/banner_img.png"
+            alt="No background Image Found"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Banner Section End -->
+
+    <!-- 1st Blue Bg Start -->
+    <section class="bg-[#2399D5]">
+      <!-- Percentage Card Section Start -->
+      <div class="max-w-[1440px] mx-auto md:flex py-16 lg:pt-28 xl:pb-0">
+        <!-- Pacantage Card -1 -->
+
+        <div class="flex-1 md:px-[50px]">
+          <h1
+            class="text-white font-semibold rubik-600 text-4xl lg:text-6xl leading-14 md:pb-[18px] text-center"
+          >
+            31%
+          </h1>
+          <h2
+            class="text-white font-semibold rubik-600 text-2xl leading-8 pb-[12px] text-center"
+          >
+            Klickrate auf unser <br />
+            Produkt
+          </h2>
+          <p class="text-white font-normal text-base leading-7 text-center">
+            erreichbare Klickrate auf unsere Produktempfehlungen.
+          </p>
+        </div>
+
+        <div class="w-1 h-250 opacity-70 border-l border-gray-300"></div>
+
+        <div
+          class="h-1 w-[75%] mx-auto my-5 opacity-70 border-b border-gray-300 md:hidden"
+        ></div>
+
+        <!-- Pacantage Card -2 -->
+        <div class="flex-1 px-[50px]">
+          <h1
+            class="text-white font-semibold rubik-600 text-4xl lg:text-6xl leading-14 pb-[18px] text-center"
+          >
+            85%
+          </h1>
+          <h2
+            class="text-white font-semibold rubik-600 text-2xl leading-8 pb-[12px] text-center"
+          >
+            Online nach Kleidung <br />
+            & Möbeln suchen
+          </h2>
+          <p class="text-white font-normal text-base leading-7 text-center">
+            sagen, dass sie beim online Einkaufen von Kleidung und Möbeln mehr
+            Gewicht auf visuelle als auf textliche Inhalte legen.
+          </p>
+        </div>
+
+        <div class="w-1 h-250 opacity-70 border-l border-gray-300"></div>
+
+        <div
+          class="h-1 w-[75%] mx-auto my-5 opacity-70 border-b border-gray-300 md:hidden"
+        ></div>
+
+        <!-- Pacantage Card -3 -->
+        <div class="flex-1 px-[50px]">
+          <h1
+            class="text-white font-semibold rubik-600 text-4xl lg:text-6xl leading-14 pb-[18px] text-center"
+          >
+            62%
+          </h1>
+          <h2
+            class="text-white font-semibold rubik-600 text-2xl leading-8 pb-[12px] text-center"
+          >
+            Millennials bevorzugen <br />
+            die visuelle Suche
+          </h2>
+          <p class="text-white font-normal text-base leading-7 text-center">
+            aller Millennials bevorzugen die visuelle Suche über jede andere
+            neue Technologie.
+          </p>
+        </div>
+      </div>
+      <!-- Percentage Card Section End -->
+
+      <!-- T-Shirt Banner Start -->
+      <div
+        class="bg-white w-full xl:rounded-tl-[400px] xl:mt-[592px] xl:pt-[472px] lg:relative py-16 md:pt-0"
+      >
+        <div
+          class="max-w-[1680px] mx-5 xl:ml-[60px] xl:mr-[60px] 2xl:ml-auto 2xl:mr-auto rounded-3xl bg-white lg:shadow-xl xl:absolute xl:-top-[472px] left-0 right-0"
+        >
+          <div
+            class="md:flex justify-center items-center md:gap-[96px] md:p-[60px] 2xl:p-[120px]"
+          >
+            <div>
+              <img class="h-full" src="/assets/images/tshirtimg.png" alt="" />
+            </div>
+            <div class="mt-8 xl:my-24 max-w-[640px] text-center md:text-left">
+              <h1
+                class="rubik-600 text-4xl lg:text-6xl font-semibold leading-[44px] lg:leading-[62px] mb-[18px]"
+              >
+                Frustration beim <br />Onlineshopping?
+              </h1>
+              <p
+                class="text-[#3F3F3F] rubik-400 text-base lg:text-lg font-normal leading-6"
+              >
+                Tausende von Artikel, schwer zu beschreibende Produktdetails,
+                endloses Suchen… Die Frustration des Users führt zu hohen
+                Absprungraten. Und noch schlimmer: <br />
+                <br />
+
+                68 % der Shopper berichten, dass Sie zu einem Shop nicht
+                zurückkehren, wenn die Sucherfahrung schlecht war. Mit den
+                AI-Suchfunktionen von VisualSearch finden Ihre Kunden, was sie
+                suchen - und das schneller. Denn neue Produkte werden anhand
+                visueller Ähnlichkeiten treffsicher vorgeschlagen, entweder per
+                Suchfunktion oder durch die Produktempfehlung.
+                <br />
+                <br />
+                Das Resultat: Zufriedenere Kunden, längere Verweildauern und
+                bessere Conversion-Raten.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testemonial Card Section Start -->
+        <div class="px-5 md:px-0 md:py-32 mt-8 md:mt-0 mb-8 md:mb-0">
+          <h1
+            class="text-center text-[#001633] rubik-600 text-4xl md:text-5xl xl:text-6xl font-semibold leading-[44px] lg:leading-[62px]"
+          >
+            Ein Überblick über unsere Produkte
+          </h1>
+
+          <div
+            class="mt-8 md:mt-16 max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-8 justify-center items-center"
+          >
+            <!-- Testimonial Card 1 -->
+            <div
+              class="p-4 md:p-12 rounded-xl bg-white shadow-xl flex-1 h-full"
+            >
+              <h1
+                class="text-[#2399D5] text-left md:text-center text-2xl md:text-4xl font-semibold leading-[44px] rubik-600"
+              >
+                VisualRecommend
+              </h1>
+              <div class="flex pt-4 md:pt-8 gap-3 min-h-[150px]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-10 h-6"
+                  viewBox="0 0 30 24"
+                  stroke="currentColor"
+                  stroke-width="1"
+                >
+                  <path
+                    d="M27.8505 15.2862L22.2255 9.66121C22.0487 9.49043 21.8119 9.39594 21.5661 9.39808C21.3203 9.40021 21.0851 9.49881 20.9113 9.67263C20.7375 9.84645 20.6389 10.0816 20.6368 10.3274C20.6346 10.5732 20.7291 10.81 20.8999 10.9868L24.9236 15.0125H11.2493C7.49926 15.0125 5.62426 11.5512 5.62426 8.44996C5.62426 8.20132 5.52549 7.96286 5.34968 7.78704C5.17386 7.61123 4.9354 7.51246 4.68676 7.51246C4.43812 7.51246 4.19967 7.61123 4.02385 7.78704C3.84803 7.96286 3.74926 8.20132 3.74926 8.44996C3.74926 12.5862 5.62426 16.8875 11.2493 16.8875H24.9236L20.8999 20.9112C20.7291 21.088 20.6346 21.3248 20.6368 21.5706C20.6389 21.8165 20.7375 22.0516 20.9113 22.2254C21.0851 22.3992 21.3203 22.4978 21.5661 22.5C21.8119 22.5021 22.0487 22.4076 22.2255 22.2368L27.8505 16.6118C28.0263 16.436 28.125 16.1976 28.125 15.949C28.125 15.7004 28.0263 15.462 27.8505 15.2862Z"
+                    fill="#001633"
+                  />
+                </svg>
+                <p class="text-[#3F3F3F] rubik-400 text-base md:text-lg">
+                  Erhöhen Sie Ihren Umsatz mit unseren automatisch generierten
+                  Produktempfehlungen. Die Funktion fördert das Cross- und
+                  Upselling von ähnlichen Produkten.
+                </p>
+              </div>
+
+              <div
+                class="mt-4 md:mt-8 mb-6 md:mb-12 pb-4 md:pb-8 px-4 md:px-8 shadow-md rounded-2xl"
+              >
+                <div
+                  class="p-4 w-fit rounded-full bg-[#2399D5] flex justify-center items-center mb-4 md:mb-8"
+                >
+                  <img
+                    class="h-4 md:h-6 my-1 w-6 md:w-8"
+                    src="/assets/icons/quote.png"
+                    alt=""
+                  />
+                </div>
+
+                <p
+                  class="text-[#3F3F3F] rubik-400 text-base md:text-lg min-h-[150px]"
+                >
+                  Die Zweifel waren sehr schnell zerstreut, weil wir gesehen
+                  haben, dass das Plug-in wirklich funktioniert. Es werden
+                  tatsächlich nur Produkte angezeigt, die eine starke
+                  Ähnlichkeit haben.
+                </p>
+
+                <div class="mt-4 md:mt-10 mb-4 md:mb-8 relative">
+                  <hr class="border border-[#3f3f3f3b]" />
+                  <div
+                    class="w-16 md:w-32 h-[3px] bg-[#2399D5] absolute top-0 left-0"
+                  ></div>
+                </div>
+
+                <div class="mt-8 flex gap-3">
+                  <img
+                    class="h-12 md:h-full"
+                    src="./assets/images/user1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5 class="rubik-600 text-lg md:text-2xl">
+                      Stefan Diedenhöfer
+                    </h5>
+                    <p class="text-[#3F3F3F] rubik-400 text-base md:text-lg">
+                      IT-Leitung bei Trendbereich
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="px-5 md:px-0 py-3 md:py-3 bg-[#F7A308] md:w-[414px] md:h-[60px] font-bold rubik-600 uppercase rounded-lg"
+              >
+                Mehr über VisualRecommend erfahren
+              </button>
+            </div>
+            <!-- Testimonial Card 2 -->
+            <div
+              class="p-4 md:p-12 rounded-xl bg-white shadow-xl flex-1 h-full"
+            >
+              <h1
+                class="text-[#2399D5] text-left md:text-center text-2xl md:text-4xl font-semibold leading-[44px] rubik-600"
+              >
+                VisualFind
+              </h1>
+              <div class="flex pt-4 md:pt-8 gap-3 min-h-[150px]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-10 h-6"
+                  viewBox="0 0 30 24"
+                  stroke="currentColor"
+                  stroke-width="1"
+                >
+                  <path
+                    d="M27.8505 15.2862L22.2255 9.66121C22.0487 9.49043 21.8119 9.39594 21.5661 9.39808C21.3203 9.40021 21.0851 9.49881 20.9113 9.67263C20.7375 9.84645 20.6389 10.0816 20.6368 10.3274C20.6346 10.5732 20.7291 10.81 20.8999 10.9868L24.9236 15.0125H11.2493C7.49926 15.0125 5.62426 11.5512 5.62426 8.44996C5.62426 8.20132 5.52549 7.96286 5.34968 7.78704C5.17386 7.61123 4.9354 7.51246 4.68676 7.51246C4.43812 7.51246 4.19967 7.61123 4.02385 7.78704C3.84803 7.96286 3.74926 8.20132 3.74926 8.44996C3.74926 12.5862 5.62426 16.8875 11.2493 16.8875H24.9236L20.8999 20.9112C20.7291 21.088 20.6346 21.3248 20.6368 21.5706C20.6389 21.8165 20.7375 22.0516 20.9113 22.2254C21.0851 22.3992 21.3203 22.4978 21.5661 22.5C21.8119 22.5021 22.0487 22.4076 22.2255 22.2368L27.8505 16.6118C28.0263 16.436 28.125 16.1976 28.125 15.949C28.125 15.7004 28.0263 15.462 27.8505 15.2862Z"
+                    fill="#001633"
+                  />
+                </svg>
+                <p class="text-[#3F3F3F] rubik-400 text-base md:text-lg">
+                  Der komplexe Amdorithmus von VisualFind lässt Shopper ein
+                  hochgeladenes Bild mit den Produkten in Ihrem Shop
+                  vergleichen. Optimieren Sie Ihre Conversion-Rate mit den
+                  besten Suchergebnissen für Ihre Kunden.
+                </p>
+              </div>
+
+              <div
+                class="mt-4 md:mt-8 mb-6 md:mb-12 pb-4 md:pb-8 px-4 md:px-8 shadow-md rounded-2xl"
+              >
+                <div
+                  class="p-4 w-fit rounded-full bg-[#2399D5] flex justify-center items-center mb-4 md:mb-8"
+                >
+                  <img
+                    class="h-4 md:h-6 my-1 w-6 md:w-8"
+                    src="/assets/icons/quote.png"
+                    alt=""
+                  />
+                </div>
+
+                <p
+                  class="text-[#3F3F3F] rubik-400 text-base md:text-lg min-h-[150px]"
+                >
+                  Oftmals lässt sich das gesuchte Produkt nicht mit Worten
+                  beschreiben, und hier kommt der Vorteil von VisualSearch ins
+                  Spiel. Man macht ein Foto, lädt es hoch und erhält innerhalb
+                  von Sekunden eine Liste ähnlicher Produkte, aus der man wählen
+                  kann.
+                </p>
+
+                <div class="md:mt-10 my-4 md:mb-8 relative">
+                  <hr class="border border-[#3f3f3f3b]" />
+                  <div
+                    class="w-16 md:w-32 h-[3px] bg-[#2399D5] absolute top-0 left-0"
+                  ></div>
+                </div>
+
+                <div class="mt-8 flex gap-3">
+                  <img
+                    class="h-12 md:h-full"
+                    src="./assets/images/user2.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5 class="rubik-600 text-lg md:text-2xl">
+                      Agentur Blueweb
+                    </h5>
+                    <p class="text-[#3F3F3F] rubik-400 text-sm md:text-base">
+                      IT-Leitung bei Trendbereich
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="px-5 md:px-0 py-3 md:py-3 bg-[#F7A308] md:w-[414px] md:h-[60px] font-bold rubik-600 uppercase rounded-lg"
+              >
+                Mehr über VisualRecommend erfahren
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Testemonial Card Section End -->
+      </div>
+      <!-- T-Shirt Banner End -->
+    </section>
+    <!-- 1st Blue Bg End -->
+
+    <!-- 2nd Blue Bg Start -->
+    <section class="bg-[#2399D5]">
+      <!-- Step Card Start -->
+      <div class="max-w-[1440px] mx-auto px-5 md:px-0 py-12 md:py-32">
+        <h1
+          class="lg:px-4 mb-8 md:mb-16 text-center text-white rubik-600 text-3xl md:text-5xl xl:text-6xl font-semibold leading-[44px] lg:leading-[62px]"
+        >
+          Wie die Installation derPlug-ins von Visual Search funktioniert
+        </h1>
+        <div class="flex flex-wrap gap-[30px] justify-center items-center">
+          <img src="./assets/images/step_1.png" alt="" />
+          <img src="./assets/images/step_2.png" alt="" />
+          <img src="./assets/images/step_3.png" alt="" />
+          <img src="./assets/images/step_4.png" alt="" />
+          <img src="./assets/images/step_5.png" alt="" />
+        </div>
+      </div>
+      <!-- Step Card End -->
+
+      <!-- Group Banner Start -->
+      <div
+        class="bg-white w-full xl:rounded-tr-[400px] xl:mt-[320px] xl:pt-[320px] lg:relative py-16 md:pt-0 xl:pb-[592px]"
+      >
+        <!-- CTA-1 Start -->
+        <div
+          class="max-w-[1440px] bg-[#001633] md:bg-[url('./assets/images/cta1_bg.png')] mx-5 xl:ml-[60px] xl:mr-[60px] 2xl:ml-auto 2xl:mr-auto rounded-3xl rounded-tl-[48px] lg:shadow-xl xl:absolute xl:-top-[320px] left-0 right-0"
+        >
+          <div
+            class="flex flex-col-reverse md:flex-row justify-center md:justify-start items-center md:gap-[96px] px-5 py-8 md:p-[60px] 2xl:p-[120px] md:relative"
+          >
+            <div class="text-center md:text-left max-w-[640px]">
+              <h1
+                class="rubik-600 text-4xl lg:text-6xl text-white font-semibold leading-[44px] lg:leading-[62px] mb-[18px]"
+              >
+                Verbessern Sie die Shopping Experience noch heute
+              </h1>
+              <p
+                class="rubik-400 text-white text-base lg:text-lg font-light leading-6"
+              >
+                Laden Sie einfach das Plug-in herunter und die App erledigt den
+                Rest. Erhalten Sie Ihre ersten Ergebnisse innerhalb von 24
+                Stunden.
+              </p>
+              <button
+                class="px-5 md:px-0 py-3 md:py-3 mt-4 md:mt-8 bg-[#F7A308] md:w-[360px] md:h-[60px] font-bold rubik-600 uppercase rounded-lg"
+              >
+                Kostenlose Testversion starten
+              </button>
+              <p
+                class="pt-[12px] text-sm text-white text-center lg:text-left md:text-[14px]"
+              >
+                30 Tage kostenlos testen + in 30 Minuten einsatzbereit
+              </p>
+            </div>
+            <img
+              class="h-full md:absolute bottom-7 right-16 md:scale-110"
+              src="/assets/images/cta1_img.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <!-- CTA-1 End -->
+
+        <!-- Group Banner-1 Start -->
+        <div class="max-w-[1440px] mx-5 md:mx-auto mt-16 md:mt-32">
+          <div
+            class="flex flex-col md:flex-row justify-center items-center md:gap-[96px]"
+          >
+            <img src="/assets/images/shoeimg.png" alt="" />
+            <div class="text-center md:text-left max-w-[640px]">
+              <h5
+                class="mb-3 rubik-600 text-[#F7A308] text-base md:text-3xl uppercase"
+              >
+                Das Beste an VisualSearch:
+              </h5>
+              <h1
+                class="rubik-600 text-4xl lg:text-6xl font-semibold leading-[44px] lg:leading-[62px] mb-[18px]"
+              >
+                Es eignet sich für Unternehmen aller Größen
+              </h1>
+              <div
+                class="my-3 md:my-8 ps-[30px] flex flex-col gap-[18px] text-left"
+              >
+                <div class="relative">
+                  <div
+                    class="h-[18px] w-[18px] border-4 border-[#F7A308] rounded-full absolute -left-[30px] top-1"
+                  ></div>
+                  <p
+                    class="rubik-400 text-[#3f3f3fba] text-base lg:text-lg leading-6 tracking-tight"
+                  >
+                    Vorbei sind die Tage der kostspieligen Individuallösungen
+                    für Großkonzerne.
+                  </p>
+                </div>
+                <div class="relative">
+                  <div
+                    class="h-[18px] w-[18px] border-4 border-[#F7A308] rounded-full absolute -left-[30px] top-1"
+                  ></div>
+                  <p
+                    class="rubik-400 text-[#3f3f3fba] text-base lg:text-lg leading-6 tracking-tight"
+                  >
+                    VisualSearch bietet Verbesserung der Shopping Experience zu
+                    erschwinglichen Preise an.
+                  </p>
+                </div>
+                <div class="relative">
+                  <div
+                    class="h-[18px] w-[18px] border-4 border-[#F7A308] rounded-full absolute -left-[30px] top-1"
+                  ></div>
+                  <p
+                    class="rubik-400 text-[#3f3f3fba] text-base lg:text-lg leading-6 tracking-tight"
+                  >
+                    Das einfache Plug-in kann selbst von weniger technikaffinen
+                    Personen innerhalb einer halben Stunde implementiert werden.
+                    So erhalten zukunftsorientierte Unternehmen aller Art die
+                    Möglichkeit, innovative Suchfunktionen in ihren Webshop
+                    einzubauen.
+                  </p>
+                </div>
+              </div>
+              <button
+                class="px-5 md:px-0 py-3 md:py-3 mt-4 md:mt-8 bg-[#F7A308] md:w-[250px] md:h-[60px] font-bold rubik-600 uppercase rounded-lg"
+              >
+                Demo ausprobieren
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Group Banner-1 End -->
+
+        <!-- Group Banner-2 Start -->
+        <div class="max-w-[1440px] mx-5 md:mx-auto mt-12 md:mt-32">
+          <div
+            class="flex flex-col-reverse md:flex-row justify-center items-center md:gap-[96px]"
+          >
+            <div class="text-center md:text-left max-w-[640px]">
+              <h5
+                class="mb-3 rubik-600 text-[#F7A308] text-base md:text-3xl uppercase"
+              >
+                Weshalb eine
+              </h5>
+              <h1
+                class="rubik-600 text-4xl lg:text-6xl font-semibold leading-[44px] lg:leading-[62px] mb-[18px]"
+              >
+                AI-Suchfunktion?
+              </h1>
+              <div
+                class="my-3 md:my-8 ps-[30px] flex flex-col gap-[18px] text-left"
+              >
+                <div class="relative">
+                  <div
+                    class="h-[18px] w-[18px] border-4 border-[#F7A308] rounded-full absolute -left-[30px] top-1"
+                  ></div>
+                  <p
+                    class="rubik-400 text-[#3f3f3fba] text-base lg:text-lg leading-6 tracking-tight"
+                  >
+                    Ein hohes Google Ranking, Personalisierung für den Kunden
+                    und eine lange Verweildauer sind wichtige Elemente eines
+                    erfolgreichen Webgeschäfts.
+                  </p>
+                </div>
+                <div class="relative">
+                  <div
+                    class="h-[18px] w-[18px] border-4 border-[#F7A308] rounded-full absolute -left-[30px] top-1"
+                  ></div>
+                  <p
+                    class="rubik-400 text-[#3f3f3fba] text-base lg:text-lg leading-6 tracking-tight"
+                  >
+                    Unsere AI-Suchfunktionen helfen in all diesen Bereichen.
+                    Denn wenn die Produktsuche persönlich und unkompliziert
+                    gestaltet wird, reduziert sich die Absprungrate. Und eine
+                    niedrige Absprungrate wird von Google mit besserem Ranking
+                    belohnt.
+                  </p>
+                </div>
+              </div>
+              <button
+                class="px-5 md:px-0 py-3 md:py-3 mt-4 md:mt-8 bg-[#F7A308] md:w-[250px] md:h-[60px] font-bold rubik-600 uppercase rounded-lg"
+              >
+                Demo ausprobieren
+              </button>
+            </div>
+            <img src="/assets/images/statimg.png" alt="" />
+          </div>
+        </div>
+        <!-- Group Banner-2 End -->
+
+        <!-- Group Banner-3 Start -->
+        <div class="max-w-[1440px] mx-5 md:mx-auto mt-12 md:mt-32">
+          <div
+            class="flex flex-col md:flex-row justify-center items-center md:gap-[96px]"
+          >
+            <img src="/assets/images/jacketimg.png" alt="" />
+            <div class="text-center md:text-left max-w-[640px]">
+              <h5
+                class="mb-3 rubik-600 text-[#F7A308] text-base md:text-3xl uppercase"
+              >
+                Handgefertigte
+              </h5>
+              <h1
+                class="rubik-600 text-4xl lg:text-6xl font-semibold leading-[44px] lg:leading-[62px] mb-[18px]"
+              >
+                Softwarelösungen (API)
+              </h1>
+              <div
+                class="my-3 md:my-8 ps-[30px] flex flex-col gap-[18px] text-left"
+              >
+                <div class="relative">
+                  <div
+                    class="h-[18px] w-[18px] border-4 border-[#F7A308] rounded-full absolute -left-[30px] top-1"
+                  ></div>
+                  <p
+                    class="rubik-400 text-[#3f3f3fba] text-base lg:text-lg leading-6 tracking-tight"
+                  >
+                    Sie verwenden ein anderes Shopsystem? Sie haben spezielle
+                    Anforderungen für Ihr System? Kein Problem.
+                  </p>
+                </div>
+                <div class="relative">
+                  <div
+                    class="h-[18px] w-[18px] border-4 border-[#F7A308] rounded-full absolute -left-[30px] top-1"
+                  ></div>
+                  <p
+                    class="rubik-400 text-[#3f3f3fba] text-base lg:text-lg leading-6 tracking-tight"
+                  >
+                    Mit unserer API können Sie VisualSearch auf Ihre Bedürfnisse
+                    anpassen, flexibel verwenden und automatisch skalieren.
+                  </p>
+                </div>
+              </div>
+              <button
+                class="px-5 md:px-0 py-3 md:py-3 mt-4 md:mt-8 bg-[#F7A308] md:w-[250px] md:h-[60px] font-bold rubik-600 uppercase rounded-lg"
+              >
+                Demo ausprobieren
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Group Banner-1 End -->
+      </div>
+      <!-- Group Banner Start -->
+    </section>
+    <!-- 2nd Blue Bg End -->
+
+    <!-- 3rd Blue Bg Start -->
+    <section class="bg-[#2399D5]">
+      <div
+        class="w-full xl:rounded-tl-[400px] xl:pt-[472px] lg:relative py-16 md:pt-0"
+      >
+        <div
+          class="max-w-[1680px] mx-5 xl:ml-[60px] xl:mr-[60px] 2xl:ml-auto 2xl:mr-auto rounded-3xl bg-white lg:shadow-xl xl:absolute xl:-top-[472px] left-0 right-0"
+        >
+          <div
+            class="md:flex justify-center items-center md:gap-[96px] md:p-[60px] 2xl:p-[120px]"
+          >
+            <div class="mt-8 max-w-[640px] text-center md:text-left">
+              <h1
+                class="rubik-600 text-4xl lg:text-6xl font-semibold leading-[44px] lg:leading-[62px] mb-[18px]"
+              >
+                VisualSearch unterstützt alle Platformen
+              </h1>
+              <p
+                class="text-[#3F3F3F] rubik-400 text-base lg:text-lg font-normal leading-6"
+              >
+                Verbessern Sie die Shopping Experience Ihrer Kunden. Jedes
+                Shopsystem kann unsere Produkte über REST API oder ein
+                dediziertes Plugin nutzen.
+              </p>
+              <button
+                class="px-5 md:px-0 py-3 md:py-3 mt-8 md:mt-16 bg-[#F7A308] md:w-[250px] md:h-[60px] font-bold rubik-600 uppercase rounded-lg"
+              >
+                Demo ausprobieren
+              </button>
+            </div>
+            <div>
+              <img class="h-full" src="/assets/images/laptopimg.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-white w-full xl:rounded-tl-[400px] xl:mt-[440px] xl:pt-[320px] lg:relative py-16 md:pt-0 xl:pb-[440px]"
+      >
+        <!-- CTA-2 Start -->
+        <div
+          class="max-w-[1440px] bg-[#001633] md:bg-[url('./assets/images/cta1_bg.png')] mx-5 xl:ml-[60px] xl:mr-[60px] 2xl:ml-auto 2xl:mr-auto rounded-3xl lg:rounded-tl-[48px] lg:shadow-xl xl:absolute xl:-top-[320px] left-0 right-0"
+        >
+          <div
+            class="flex flex-col-reverse md:flex-row justify-center md:justify-start items-center md:gap-[96px] px-5 py-8 md:p-[60px] 2xl:p-[120px] md:relative"
+          >
+            <div class="text-center md:text-left max-w-[640px]">
+              <h1
+                class="rubik-600 text-4xl lg:text-6xl text-white font-semibold leading-[44px] lg:leading-[62px] mb-[18px]"
+              >
+                Sie sind eine Agentur?
+              </h1>
+              <p
+                class="rubik-400 text-white text-base lg:text-lg font-light leading-6"
+              >
+                Dann freuen wir uns über eine Zusammenarbeit. Gemeinsam können
+                wir die User Experience des Endkunden verbessern und dabei das
+                meiste für Ihre E-Commerce-Kunden herausholen. Für bessere
+                Conversion-Raten und einen höheren Umsatz für Ihre Kunden mit
+                minimalem Aufwand.
+              </p>
+              <button
+                class="px-5 md:px-0 py-3 md:py-3 mt-4 md:mt-8 bg-[#F7A308] md:w-[300px] md:h-[60px] font-bold rubik-600 uppercase rounded-lg"
+              >
+                Zusammenarbeit starten
+              </button>
+            </div>
+            <img
+              class="h-full md:absolute bottom-7 right-16 md:scale-110"
+              src="/assets/images/cta2_img.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <!-- CTA-2 End -->
+
+        <!-- Slider Start -->
+        <h1
+          class="mt-20 mb-12 rubik-600 text-4xl lg:text-6xl text-center font-semibold leading-[44px] lg:leading-[62px]"
+        >
+          Was Kunden über uns sagen
+        </h1>
+
+        <div class="max-w-[85vw] mx-auto relative z-10">
+          <div class="swiper main-swiper mySwiper">
+            <div class="swiper-wrapper max-w-[1440px]">
+              <div class="swiper-slide">
+                <img
+                  class="lg:shadow-lg rounded-lg mx-auto lg:mx-0"
+                  src="./assets/images/sliderimg1.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="lg:shadow-lg rounded-lg mx-auto lg:mx-0"
+                  src="./assets/images/sliderimg2.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="lg:shadow-lg rounded-lg mx-auto lg:mx-0"
+                  src="./assets/images/sliderimg3.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="lg:shadow-lg rounded-lg mx-auto lg:mx-0"
+                  src="./assets/images/sliderimg4.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="lg:shadow-lg rounded-lg mx-auto lg:mx-0"
+                  src="./assets/images/sliderimg1.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="lg:shadow-lg rounded-lg mx-auto lg:mx-0"
+                  src="./assets/images/sliderimg2.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="lg:shadow-lg rounded-lg mx-auto lg:mx-0"
+                  src="./assets/images/sliderimg3.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="lg:shadow-lg rounded-lg mx-auto lg:mx-0"
+                  src="./assets/images/sliderimg4.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="swiper-button-next next-btn"></div>
+            <div class="swiper-button-prev prev-btn"></div>
+          </div>
+        </div>
+
+        <!-- Slider End -->
+
+        <!-- Group Banner Start -->
+        <div class="max-w-[1440px] mx-5 md:mx-auto mt-16 md:mt-32">
+          <div
+            class="flex flex-col md:flex-row justify-center items-center md:gap-[96px]"
+          >
+            <img src="/assets/images/teamprogressimg.png" alt="" />
+            <div class="text-center md:text-left max-w-[640px]">
+              <h1
+                class="rubik-600 text-4xl lg:text-6xl font-semibold leading-[44px] lg:leading-[62px] mb-[18px]"
+              >
+                Wer ist VisualSearch?
+              </h1>
+              <div class="my-3 md:my-8 flex flex-col gap-[18px] text-left">
+                <p
+                  class="rubik-400 text-[#3f3f3fba] text-base lg:text-lg leading-6 tracking-tight"
+                >
+                  Wir sind ein Team von langjährigen Spezialisten im Bereich der
+                  Entwicklung innovativer Lösungen, wissenschaftlicher Forschung
+                  und im Aufbau von erfolgreichen Start-ups.
+                  <br /><br />
+                  Unsere Stärke liegt in der Entwicklung von maßgeschneiderten
+                  digitalen AI-Suchfunktionen. Wir arbeiten gern eng mit unseren
+                  Kunden zusammen und wollen Sie langfristig unterstützen.
+                </p>
+              </div>
+              <button
+                class="px-5 md:px-0 py-3 md:py-3 mt-4 md:mt-8 bg-[#F7A308] md:w-[350px] md:h-[60px] font-bold rubik-600 uppercase rounded-lg"
+              >
+                Mehr über das Team erfahren
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Group Banner End -->
+      </div>
+    </section>
+    <!-- 3rd Blue Bg End -->
+
+    <!-- 4th Blue Bg Start -->
+    <section class="bg-[#2399D5]">
+      <div
+        class="w-full xl:rounded-tl-[400px] xl:pt-[240px] lg:relative px-5 py-16 md:pt-0"
+      >
+        <!-- CTA-3 Start -->
+        <div
+          class="max-w-[1440px] w-full bg-[#001633] md:bg-[url('./assets/images/cta1_bg.png')] 2xl:ml-auto 2xl:mr-auto rounded-3xl lg:rounded-tl-[48px] lg:shadow-xl xl:absolute xl:-top-[320px] left-0 right-0"
+        >
+          <div
+            class="flex flex-col-reverse md:flex-row justify-center md:justify-start items-center md:gap-[96px] px-5 py-8 md:p-[60px] 2xl:px-[120px] 2xl:py-[110px] md:relative"
+          >
+            <div class="text-center md:text-left max-w-[640px]">
+              <h1
+                class="rubik-600 text-4xl lg:text-6xl text-white font-semibold leading-[44px] lg:leading-[62px] mb-[18px]"
+              >
+                Starten Sie Ihre kostenlose 30-tägige Testversion.
+              </h1>
+              <p
+                class="rubik-400 text-white text-base lg:text-lg font-light leading-6"
+              >
+                Verbessern Sie die Shopping Experience Ihrer Kunden. Profitieren
+                Sie von einer intuitiven Suchfunktion für Ihre Kunden und einer
+                besseren Conversion-Rate für Sie.
+              </p>
+              <button
+                class="px-5 md:px-0 py-3 md:py-3 mt-8 md:mt-16 bg-[#F7A308] md:w-[250px] md:h-[60px] font-bold rubik-600 uppercase rounded-lg"
+              >
+                Jetzt testen
+              </button>
+            </div>
+            <img
+              class="h-full md:absolute bottom-7 right-16 md:scale-110"
+              src="/assets/images/cta3_img.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <!-- CTA-3 End -->
+      </div>
+
+      <!-- Data Card Start -->
+      <div>
+        <div class="max-w-[1440px] mx-auto px-5 md:px-0 py-12 md:py-32">
+          <h1
+            class="lg:px-4 mb-8 md:mb-16 text-center text-white rubik-600 text-3xl md:text-5xl xl:text-6xl font-semibold leading-[44px] lg:leading-[62px]"
+          >
+            Unternehmen Daten
+          </h1>
+          <div class="flex flex-wrap gap-[30px] justify-center items-center">
+            <img src="./assets/images/datacard1.png" alt="" />
+            <img src="./assets/images/datacard2.png" alt="" />
+            <img src="./assets/images/datacard3.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- Data Card End -->
+
+      <!-- Footer Start -->
+      <div
+        class="bg-white xl:rounded-tr-[400px] pt-16 lg:pt-32 px-5 pb-5 lg:px-0 lg:pb-0"
+      >
+        <div class="max-w-[1440px] mx-auto">
+          <div class="lg:hidden flex flex-col gap-4 justify-start items-start">
+            <img src="./assets/images/logo.png" alt="" />
+            <p class="rubik-400 text-base lg:text-lg text-[#3F3F3F]">
+              Unsere Stärke liegt in der Entwicklung von maßgeschneiderten
+              digitalen Empfehlungsassistenten. Es ist unsere Leidenschaft, eng
+              mit unseren Kunden zusammenzuarbeiten und sie langfristig zu
+              unterstützen.
+            </p>
+            <div class="flex gap-3">
+              <img src="./assets/icons/linkedin.png" alt="" />
+              <img src="./assets/icons/facebook.png" alt="" />
+              <img src="./assets/icons/instagram.png" alt="" />
+              <img src="./assets/icons/twitter.png" alt="" />
+              <img src="./assets/icons/youtube.png" alt="" />
+            </div>
+          </div>
+          <div class="my-8 lg:my-0 flex">
+            <div
+              class="w-full grid grid-cols-2 lg:grid-cols-4 justify-between gap-8 lg:gap-0"
+            >
+              <div>
+                <h5 class="rubik-600 text-xl lg:text-2xl">Schnelllink</h5>
+                <hr class="w-[150px] border border-[#F7A308] my-4" />
+                <div class="flex flex-col gap-3">
+                  <a
+                    class="rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+                    href="#"
+                    >Home</a
+                  >
+                  <a
+                    class="rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+                    href="#"
+                  >
+                    Produkte
+                  </a>
+                  <a
+                    class="rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+                    href="#"
+                    >Verfahren
+                  </a>
+                  <a
+                    class="rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+                    href="#"
+                    >Über uns
+                  </a>
+                  <a
+                    class="rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+                    href="#"
+                    >Preise</a
+                  >
+                  <a
+                    class="rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+                    href="#"
+                    >Kontakt
+                  </a>
+                </div>
+              </div>
+              <div>
+                <h5 class="rubik-600 text-xl lg:text-2xl">Produkte</h5>
+                <hr class="w-[150px] border border-[#F7A308] my-4" />
+                <div class="flex flex-col gap-3">
+                  <a
+                    class="rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+                    href="#"
+                  >
+                    VisualRecommend
+                  </a>
+                  <a
+                    class="rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+                    href="#"
+                  >
+                    VisualFind
+                  </a>
+                  <a
+                    class="rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+                    href="#"
+                  >
+                    Support
+                  </a>
+                </div>
+              </div>
+              <div>
+                <h5 class="rubik-600 text-xl lg:text-2xl">Visualsearch</h5>
+                <hr class="w-[150px] border border-[#F7A308] my-4" />
+                <div class="flex flex-col gap-3">
+                  <a
+                    class="rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+                    href="#"
+                  >
+                    Passend für alle Größen
+                  </a>
+                  <a
+                    class="rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+                    href="#"
+                  >
+                    KI-Suchfunktion
+                  </a>
+                  <a
+                    class="rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+                    href="#"
+                  >
+                    Softwarelösungen (API)
+                  </a>
+                </div>
+              </div>
+              <div>
+                <h5 class="rubik-600 text-xl lg:text-2xl">Hilfecenter</h5>
+                <hr class="w-[150px] border border-[#F7A308] my-4" />
+                <div class="flex flex-col gap-3">
+                  <a
+                    class="rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+                    href="#"
+                  >
+                    Impressum
+                  </a>
+                  <a
+                    class="rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+                    href="#"
+                  >
+                    Karriere
+                  </a>
+                  <a
+                    class="rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+                    href="#"
+                  >
+                    Nachricht
+                  </a>
+                  <a
+                    class="rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+                    href="#"
+                  >
+                    Datenschutzrichtlinien
+                  </a>
+                  <a
+                    class="rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+                    href="#"
+                  >
+                    Nutzungsbedingungen
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="hidden lg:block max-w-[350px]">
+              <h5 class="rubik-600 text-xl lg:text-2xl">Über uns</h5>
+              <hr class="w-[150px] border border-[#F7A308] my-4" />
+              <p class="rubik-400 text-base lg:text-lg text-[#3F3F3F]">
+                Unsere Stärke liegt in der Entwicklung von maßgeschneiderten
+                digitalen Empfehlungsassistenten. Es ist unsere Leidenschaft,
+                eng mit unseren Kunden zusammenzuarbeiten und sie langfristig zu
+                unterstützen.
+              </p>
+            </div>
+          </div>
+          <hr class="hidden lg:block mt-24 mb-6 border" />
+          <div class="hidden lg:flex justify-between items-center pb-8">
+            <img src="./assets/images/logo.png" alt="" />
+            <p class="rubik-400 text-base lg:text-lg text-[#3F3F3F]">
+              © 2024 <span class="text-[#F7A308]">VisualSearch GmbH</span>. Alle
+              Rechte vorbehalten
+            </p>
+            <div class="flex gap-3">
+              <img src="./assets/icons/linkedin.png" alt="" />
+              <img src="./assets/icons/facebook.png" alt="" />
+              <img src="./assets/icons/instagram.png" alt="" />
+              <img src="./assets/icons/twitter.png" alt="" />
+              <img src="./assets/icons/youtube.png" alt="" />
+            </div>
+          </div>
+          <p
+            class="lg:hidden text-center rubik-400 text-base lg:text-lg text-[#3F3F3F]"
+          >
+            © 2024 <span class="text-[#F7A308]">VisualSearch GmbH</span>. Alle
+            Rechte vorbehalten
+          </p>
+        </div>
+      </div>
+      <!-- Footer End -->
+    </section>
+    <!-- 4th Blue Bg End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 4,
+          },
+        },
+      });
+    </script>
+    <script>
+      var swiper = new Swiper(".bnrSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

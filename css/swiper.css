@@ -1,0 +1,124 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.main-swiper {
+  padding-left: 100px !important;
+  padding-right: 75px !important;
+  padding-bottom: 20px !important;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+}
+
+.swiper-wrapper {
+  max-width: 1440px !important;
+}
+
+.prev-btn {
+  background-color: white;
+  height: 100%;
+  top: 20px;
+  width: 96px;
+  display: flex;
+  justify-content: left;
+  left: 0px;
+}
+
+.next-btn {
+  background-color: white;
+  height: 100%;
+  top: 20px;
+  width: 70px;
+  display: flex;
+  justify-content: right;
+  right: 0px;
+  cursor: default;
+}
+
+.prev-btn-prod {
+  background-color: #2399D5;
+  height: 100%;
+  top: 20px;
+  width: 96px;
+  display: flex;
+  justify-content: left;
+  left: 0px;
+  color: white;
+}
+
+.next-btn-prod {
+  background-color: #2399D5;
+  height: 100%;
+  top: 20px;
+  width: 70px;
+  display: flex;
+  justify-content: right;
+  right: 0px;
+  cursor: default;
+  color: white;
+}
+
+.next-btn-banner {
+  color: white;
+}
+
+.prev-btn-banner {
+  color: white;
+}
+
+.swiper-button-prev:after .swiper-button-next:after {
+  cursor: pointer !important;
+}
+
+@media screen and (max-width: 768px) {
+  .prev-btn {
+    width: 24px;
+  }
+
+  .next-btn {
+    width: 24px;
+  }
+
+  .prev-btn-prod {
+    width: 24px;
+    background-color: transparent;
+    color: #2399D5;
+  }
+
+  .next-btn-prod {
+    width: 24px;
+    background-color: transparent;
+    color: #2399D5;
+  }
+
+  .prev-btn-white {
+    width: 24px;
+    background-color: transparent;
+    color: white;
+    left: 0px;
+  }
+
+  .next-btn-white {
+    width: 24px;
+    background-color: transparent;
+    color: white;
+    right: 0px;
+  }
+
+  .main-swiper {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  .next-btn-banner {
+    display: none;
+  }
+
+  .prev-btn-banner {
+    display: none;
+  }
+}
